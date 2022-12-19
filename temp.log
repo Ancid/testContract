@@ -1,0 +1,16 @@
+npx hardhat run scripts/givers.js                                                                                       1 ↵ antonsidorov@Antons-MacBook-Pro
+Error: cannot estimate gas; transaction may fail or may require manual gas limit [ See: https://links.ethers.org/v5-errors-UNPREDICTABLE_GAS_LIMIT ] {
+  reason: 'execution reverted',
+  code: 'UNPREDICTABLE_GAS_LIMIT',
+  method: 'estimateGas',
+  transaction: {
+    from: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+    data: '...',
+    accessList: null
+  },
+  error: ProviderError: HttpProviderError
+      at HttpProvider.request (/Users/antonsidorov/projects/clipfinance/project/Clipcoin/node_modules/hardhat/src/internal/core/providers/http.ts:78:19)
+      at HDWalletProvider.request (/Users/antonsidorov/projects/clipfinance/project/Clipcoin/node_modules/hardhat/src/internal/core/providers/accounts.ts:187:34)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at EthersProviderWrapper.send (/Users/antonsidorov/projects/clipfinance/project/Clipcoin/node_modules/@nomiclabs/hardhat-ethers/src/internal/ethers-provider-wrapper.ts:13:20)
+}
