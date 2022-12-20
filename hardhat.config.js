@@ -27,12 +27,27 @@ module.exports = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat:{
+      allowUnlimitedContractSize: true,
       forking: {
-        url: "https://wispy-radial-hexagon.bsc-testnet.discover.quiknode.pro/36a87801368fe155bfac77aea1987d6f00c6cacb/",
-        allowUnlimitedContractSize: true,
-        timeout:90000
-      }
-    }
+        url: "https://tame-tiniest-mound.bsc.discover.quiknode.pro/5d76a95ecf3e28e9b4315c3de5f015441153f49b/",
+        enabled: true
+      },
+    },
+    // bsctest: {
+    //   // url: "https://data-seed-prebsc-1-s1.binance.org:8545",
+    //   url: "https://wispy-radial-hexagon.bsc-testnet.discover.quiknode.pro/36a87801368fe155bfac77aea1987d6f00c6cacb/",
+    //   chainId: 97,
+    //   // allowUnlimitedContractSize: true,
+    //   gas: 2100000,
+    //   gasPrice: 8000000000,
+    //   accounts: {
+    //     mnemonic: "test test test test test test test test test test test junk",
+    //     path: "m/44'/60'/0'/0",
+    //     initialIndex: 0,
+    //     count: 20,
+    //     passphrase: "",
+    //   },
+    // },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
