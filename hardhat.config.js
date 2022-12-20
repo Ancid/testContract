@@ -24,26 +24,15 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  defaultNetwork: "bsctest",
+  defaultNetwork: "hardhat",
   networks: {
     hardhat:{
-      allowUnlimitedContractSize: true,
-    },
-    bsctest: {
-      // url: "https://data-seed-prebsc-1-s1.binance.org:8545",
-      url: "https://wispy-radial-hexagon.bsc-testnet.discover.quiknode.pro/36a87801368fe155bfac77aea1987d6f00c6cacb/",
-      chainId: 97,
-      // allowUnlimitedContractSize: true,
-      gas: 2100000,
-      gasPrice: 8000000000,
-      accounts: {
-        mnemonic: "test test test test test test test test test test test junk",
-        path: "m/44'/60'/0'/0",
-        initialIndex: 0,
-        count: 20,
-        passphrase: "",
-      },
-    },
+      forking: {
+        url: "https://wispy-radial-hexagon.bsc-testnet.discover.quiknode.pro/36a87801368fe155bfac77aea1987d6f00c6cacb/",
+        allowUnlimitedContractSize: true,
+        timeout:90000
+      }
+    }
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
