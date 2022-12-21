@@ -2,8 +2,6 @@
 
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
-const {assert} = require('chai')
-const type = require('type-detect');
 
 
 
@@ -11,7 +9,6 @@ const type = require('type-detect');
 
   let GiversToken;
   let hardhatToken;
-  // let owner;
   let addr1;
   let addr2;
   let addr3;
@@ -20,7 +17,6 @@ const type = require('type-detect');
   let addr6;
   let initialLiquidty;
   let supply;
-  let pairsigner;
 
 describe("Givers Chain tests", function () {
   describe("Deployment", function() {
